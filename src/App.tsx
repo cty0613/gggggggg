@@ -5,6 +5,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react";
 
 import Body from './components/body_components/Body';
 import Leg from './components/leg_components/Leg';
@@ -41,6 +42,7 @@ const App: React.FC = () => {
   return (
     <>
       <GlobalStyle/>
+      <Analytics/>
       <Router>
         <Routes>
           <Route path='/' element={<Body/>}/>
